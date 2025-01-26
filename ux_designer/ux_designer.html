@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <title>Rodmap</title>
+
+    <style>
+      .bgcolor {
+        background-color: rgb(243, 243, 206);
+        border-radius: 10px;
+      }
+      .btncard {
+        background-color: rgb(39, 65, 122);
+      }
+    </style>
+  </head>
+  <body style="background-color: rgb(214, 244, 240)">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item mr-4 mt-2 ms-3">
+              <a class="nav-link active" aria-current="page" href="/index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item ms-3 mt-2">
+              <button
+                type="button"
+                class="btn btn-info"
+                data-bs-toggle="modal"
+                data-bs-target="#loginModal"
+              >
+                Login
+              </button>
+            </li>
+            <li class="nav-item ms-3 mt-2">
+              <button
+                type="button"
+                class="btn btn-info"
+                data-bs-toggle="modal"
+                data-bs-target="#signinModal"
+              >
+                Sign in
+              </button>
+            </li>
+
+            <div
+              class="modal fade"
+              id="loginModal"
+              tabindex="-1"
+              aria-labelledby="loginModal"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <form>
+                      <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label"
+                          >User Name</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="exampleInputEmail1"
+                          aria-describedby="emailHelp"
+                        />
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label"
+                          >Password</label
+                        >
+                        <input
+                          type="password"
+                          class="form-control"
+                          id="exampleInputPassword1"
+                        />
+                      </div>
+                      <div class="mb-3 form-check">
+                        <input
+                          type="checkbox"
+                          class="form-check-input"
+                          id="exampleCheck1"
+                        />
+                        <label class="form-check-label" for="exampleCheck1"
+                          >Check me out</label
+                        >
+                      </div>
+                      <button type="submit" class="btn btn-info">Login</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="modal fade"
+              id="signinModal"
+              tabindex="-1"
+              aria-labelledby="signinModal"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <form>
+                      <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label"
+                          >First Name</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="exampleInputEmail1"
+                          aria-describedby="emailHelp"
+                        />
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label"
+                          >Last Name</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="exampleInputEmail1"
+                          aria-describedby="emailHelp"
+                        />
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label"
+                          >Email</label
+                        >
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="exampleInputEmail1"
+                          aria-describedby="emailHelp"
+                        />
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label"
+                          >Password</label
+                        >
+                        <input
+                          type="password"
+                          class="form-control"
+                          id="exampleInputPassword1"
+                        />
+                      </div>
+                      <div class="mb-3 form-check">
+                        <input
+                          type="checkbox"
+                          class="form-check-input"
+                          id="exampleCheck1"
+                        />
+                        <label class="form-check-label" for="exampleCheck1"
+                          >I agree to the User Agreement and privacy policy
+                        </label>
+                      </div>
+                      <button type="submit" class="btn btn-info">
+                        Sign in
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ul>
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-3 d-flex justify-content-center">
+      <h1
+        class="rounded-pill p-3 border border-1 border-dark"
+        style="background-color: rgb(243, 243, 206)"
+      >
+        User Experience (UX) Designer
+      </h1>
+    </div>
+
+    <div
+      class="row d-flex justify-content-evenly"
+      style="background-color: rgb(214, 244, 240)"
+    >
+      <div class="card mt-4 bgcolor" style="width: 18rem">
+        <img
+          src="uxroadmap.png"
+          class="card-img-top mt-3"
+          alt="User Experience (UX) Designer roadmap"
+        />
+      </div>
+
+      <div class="card mt-4 bgcolor" style="width: 18rem">
+        <img
+          src="Understanding_human_decision_making.jfif"
+          class="card-img-top mt-3"
+          alt="Understanding human decision making"
+        />
+        <div class="card-body">
+          <h5 class="card-title d-flex justify-content-center">
+            Understanding human decision making
+          </h5>
+          <p class="card-text mt-4">
+            Human decision-making is the process of selecting a course of action
+            from among several options. It involves reasoning, analysis,
+            intuition, and often emotions.
+          </p>
+          <a
+            href="https://www.javatpoint.com/decision-making-definition"
+            class="btn btn-primary btncard"
+            >Learn more -></a
+          >
+        </div>
+      </div>
+
+      <div class="card mt-4 bgcolor" style="width: 18rem">
+        <img
+          src="Behavioral_Change_Strategy.jfif"
+          class="card-img-top mt-3"
+          alt="Behavioral Change Strategy"
+        />
+        <div class="card-body">
+          <h5 class="card-title d-flex justify-content-center">
+            Behavioral Change Strategy
+          </h5>
+          <p class="card-text mt-4">
+            A Behavioral Change Strategy is a systematic plan to influence and
+            modify individual or group behaviors toward a desired outcome. It is
+            widely used in contexts like healthcare, organizational management,
+            education, and social policy.
+          </p>
+          <a
+            href="https://www.javatpoint.com/behavioral-design-patterns"
+            class="btn btn-primary btncard"
+            >Learn more -></a
+          >
+        </div>
+      </div>
+
+      <div class="card mt-4 bgcolor" style="width: 18rem">
+        <img
+          src="Support_Conscious_Action.jfif"
+          class="card-img-top mt-3"
+          alt="Support Conscious Action"
+        />
+        <div class="card-body">
+          <h5 class="card-title d-flex justify-content-center">
+            Support Conscious Action
+          </h5>
+
+          <p class="card-text mt-4">
+            Supporting Conscious Action involves creating conditions that
+            empower individuals or groups to make deliberate, intentional, and
+            thoughtful choices that align with their goals, values, or
+            responsibilities.
+          </p>
+          <a
+            href="https://breathetogetheryoga.com/taking-conscious-action/"
+            class="btn btn-primary btncard"
+            >Learn more -></a
+          >
+        </div>
+      </div>
+
+      <div class="card mt-4 bgcolor" style="width: 18rem">
+        <img src="Cheating.jfif" class="card-img-top mt-3" alt="Cheating" />
+        <div class="card-body">
+          <h5 class="card-title d-flex justify-content-center">Cheating</h5>
+          <p class="card-text mt-4">
+            Cheating in UX design refers to unethical practices that manipulate
+            users, intentionally mislead them, or prioritize short-term business
+            goals at the expense of user trust and experience. Below are some
+            common forms of cheating in UX design and strategies to address
+            them.
+          </p>
+          <a
+            href="https://medium.com/refactoring-ui/7-practical-tips-for-cheating-at-design-40c736799886"
+            class="btn btn-primary btncard"
+            >Learn more -></a
+          >
+        </div>
+      </div>
+
+      <div class="card mt-4 bgcolor" style="width: 18rem">
+        <img
+          src="Make_or_Change_Habits.jfif"
+          class="card-img-top mt-3"
+          alt="Make or Change Habits"
+        />
+        <div class="card-body">
+          <h5 class="card-title d-flex justify-content-center">
+            Make or Change Habits
+          </h5>
+          <p class="card-text mt-4">
+            Making or changing habits is an essential aspect of UX design that
+            focuses on helping users adopt new behaviors and patterns.When you
+            make small changes and stick to them, they become part of your
+            routine.And as you repeat these habits day after day, they become
+            effortless, automatic.
+          </p>
+          <a
+            href="https://makeiterate.com/7-ux-design-habits-that-lead-to-exponential-career-growth/"
+            class="btn btn-primary btncard"
+            >Learn more -></a
+          >
+        </div>
+      </div>
+
+      <div class="card mt-4 bgcolor" style="width: 18rem">
+        <img
+          src="Understanding_the_product.jfif"
+          class="card-img-top mt-3"
+          alt="Understanding the product"
+        />
+        <div class="card-body">
+          <h5 class="card-title d-flex justify-content-center">
+            Understanding the product
+          </h5>
+          <p class="card-text mt-4">
+            n UX design, understanding the product involves deeply grasping its
+            purpose, target audience, and overall value proposition. This
+            foundational knowledge enables the designer to create user
+            experiences that align with user needs and business goals.
+          </p>
+          <a
+            href="https://www.interaction-design.org/literature/article/difference-between-product-and-ux-designer?srsltid=AfmBOopOv2jWiXDyK1sosRDwrfvLy8uAz4-xykN4_Gtu-61cb3uD1iqg"
+            class="btn btn-primary btncard"
+            >Learn more -></a
+          >
+        </div>
+      </div>
+
+      <div class="card mt-4 bgcolor" style="width: 18rem">
+        <img
+          src="Conceptual_Design.jfif"
+          class="card-img-top mt-3"
+          alt="Conceptual Design"
+        />
+        <div class="card-body">
+          <h5 class="card-title d-flex justify-content-center">
+            Conceptual Design
+          </h5>
+          <p class="card-text mt-4">
+            Conceptual design in UX design is the process of generating abstract
+            ideas that shape a project's direction. It's a crucial phase that
+            lays the foundation for a product's functionality, aesthetics, and
+            user experience.The process of conceptual design can also be
+            described as the definition of the product's morphology, how it is
+            made up and its layout.
+          </p>
+          <a
+            href="https://www.geeksforgeeks.org/what-is-conceptual-model-in-ux/"
+            class="btn btn-primary btncard"
+            >Learn more -></a
+          >
+        </div>
+      </div>
+
+      <div class="card mt-4 bgcolor" style="width: 18rem">
+        <img
+          src="Prototyping.jfif"
+          class="card-img-top mt-3"
+          alt="Prototyping"
+        />
+        <div class="card-body">
+          <h5 class="card-title d-flex justify-content-center">Prototyping</h5>
+          <p class="card-text mt-4">
+            It's an essential part of user experience (UX) design that usually
+            comes after ideation, where a designer or design team have created
+            and selected ideas that can solve users' needs.In electronics,
+            prototyping means building an actual circuit to a theoretical design
+            to verify that it works, and to provide a physical platform for
+            debugging it if it does not.
+          </p>
+          <a
+            href="https://www.geeksforgeeks.org/what-is-a-prototype-and-how-to-create-it/"
+            class="btn btn-primary btncard"
+            >Learn more -></a
+          >
+        </div>
+      </div>
+
+      <div class="card mt-4 bgcolor" style="width: 18rem">
+        <img
+          src="UX_best_Practices.jfif"
+          class="card-img-top mt-3"
+          alt="UX best Practices"
+        />
+        <div class="card-body">
+          <h5 class="card-title d-flex justify-content-center">
+            UX best Practices
+          </h5>
+          <p class="card-text mt-4">
+            UX best practices include: prioritizing user needs by designing with
+            simplicity, consistency, clear navigation, accessibility, regular
+            user testing, responsive design across devices, well-planned forms.
+            Organizing your site with a clear, consistent hierarchy makes it
+            easier and faster for your users to navigate.
+          </p>
+          <a
+            href="https://baymard.com/learn/ux-design-principles"
+            class="btn btn-primary btncard"
+            >Learn more -></a
+          >
+        </div>
+      </div>
+
+      <div class="card mt-4 bgcolor" style="width: 18rem">
+        <img
+          src="measuring_the_Impact.jfif"
+          class="card-img-top mt-3"
+          alt="measuring the Impact"
+        />
+        <div class="card-body">
+          <h5 class="card-title d-flex justify-content-center">
+            measuring the Impact
+          </h5>
+          <p class="card-text mt-4">
+            UX designers can measure the impact of their work by using metrics
+            to understand how users interact with a product or service. These
+            metrics can help designers make informed decisions and improve the
+            user experience.Our definition of Impact Measurement is informed by
+            academic work on theory-driven evaluation.
+          </p>
+          <a
+            href="https://gavstech.com/blogs/measuring-the-impact-of-ux-design/"
+            class="btn btn-primary btncard"
+            >Learn more -></a
+          >
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
