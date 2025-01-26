@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <title>Rodmap</title>
+
+    <style>
+      .bgcolor {
+        background-color: rgb(243, 243, 206);
+        border-radius: 10px;
+      }
+      .btncard {
+        background-color: rgb(39, 65, 122);
+      }
+    </style>
+  </head>
+
+  <body style="background-color: rgb(214, 244, 240)">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item mr-4 mt-2 ms-3">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="/index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item ms-3 mt-2">
+              <button
+                type="button"
+                class="btn btn-info"
+                data-bs-toggle="modal"
+                data-bs-target="#loginModal"
+              >
+                Login
+              </button>
+            </li>
+            <li class="nav-item ms-3 mt-2">
+              <button
+                type="button"
+                class="btn btn-info"
+                data-bs-toggle="modal"
+                data-bs-target="#signinModal"
+              >
+                Sign in
+              </button>
+            </li>
+
+            <div
+              class="modal fade"
+              id="loginModal"
+              tabindex="-1"
+              aria-labelledby="loginModal"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <form>
+                      <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label"
+                          >User Name</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="exampleInputEmail1"
+                          aria-describedby="emailHelp"
+                        />
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label"
+                          >Password</label
+                        >
+                        <input
+                          type="password"
+                          class="form-control"
+                          id="exampleInputPassword1"
+                        />
+                      </div>
+                      <div class="mb-3 form-check">
+                        <input
+                          type="checkbox"
+                          class="form-check-input"
+                          id="exampleCheck1"
+                        />
+                        <label class="form-check-label" for="exampleCheck1"
+                          >Check me out</label
+                        >
+                      </div>
+                      <button type="submit" class="btn btn-info">Login</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="modal fade"
+              id="signinModal"
+              tabindex="-1"
+              aria-labelledby="signinModal"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <form>
+                      <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label"
+                          >First Name</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="exampleInputEmail1"
+                          aria-describedby="emailHelp"
+                        />
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label"
+                          >Last Name</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="exampleInputEmail1"
+                          aria-describedby="emailHelp"
+                        />
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label"
+                          >Email</label
+                        >
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="exampleInputEmail1"
+                          aria-describedby="emailHelp"
+                        />
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label"
+                          >Password</label
+                        >
+                        <input
+                          type="password"
+                          class="form-control"
+                          id="exampleInputPassword1"
+                        />
+                      </div>
+                      <div class="mb-3 form-check">
+                        <input
+                          type="checkbox"
+                          class="form-check-input"
+                          id="exampleCheck1"
+                        />
+                        <label class="form-check-label" for="exampleCheck1"
+                          >I agree to the User Agreement and privacy policy
+                        </label>
+                      </div>
+                      <button type="submit" class="btn btn-info">
+                        Sign in
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ul>
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-3 d-flex justify-content-center">
+      <h1
+        class="rounded-pill p-3 border border-1 border-dark"
+        style="background-color: rgb(243, 243, 206)"
+      >
+        Game Development
+      </h1>
+    </div>
+
+    <div
+      class="row d-flex justify-content-evenly"
+      style="background-color: rgb(214, 244, 240)"
+    >
+      <div class="card mt-4 bgcolor" style="width: 18rem">
+        <img
+          src="game_developer_roadmap.png"
+          class="card-img-top mt-3"
+          alt="Game Development"
+        />
+      </div>
+
+      <div class="card mt-4 bgcolor" style="width: 18rem">
+        <img
+          src="Client_Side.jfif"
+          class="card-img-top mt-3"
+          alt="Client Side"
+        />
+        <div class="card-body">
+          <h5 class="card-title">Client Side</h5>
+          <p class="card-text">
+            In game development, the client side refers to the player's software
+            or hardware device, or both, that they use to play the game. The
+            client side is responsible for translating the player's inputs into
+            messages that are sent to a server for processing.
+          </p>
+          <a
+            href="https://www.javatpoint.com/server-side-scripting-vs-client-side-scripting"
+            class="btn btn-primary btncard"
+            >Let's Start</a
+          >
+        </div>
+      </div>
+
+      <div class="card mt-4 bgcolor" style="width: 18rem">
+        <img
+          src="Game_Mathematics.jfif"
+          class="card-img-top mt-3"
+          alt="Game Mathematics"
+        />
+        <div class="card-body">
+          <h5 class="card-title">Game Mathematics</h5>
+          <p class="card-text">
+            Mathematics is used in game development to model the behavior of
+            objects in the game world, and to create lifelike interactions
+            between characters, vehicles, and the environment. Some mathematical
+            concepts used in game development include: Kinematics, Newtonian
+            mechanics, and Calculus.
+          </p>
+          <a
+            href="https://pikuma.com/blog/math-for-game-developers"
+            class="btn btn-primary btncard"
+            >Let's Start</a
+          >
+        </div>
+      </div>
+
+      <div class="card mt-4 bgcolor" style="width: 18rem">
+        <img
+          src="Game_Physics.jfif"
+          class="card-img-top mt-3"
+          alt="Game Physics"
+        />
+        <div class="card-body">
+          <h5 class="card-title">Game Physics</h5>
+          <p class="card-text">
+            Computer animation physics or game physics are laws of physics as
+            they are defined within a simulation or video game, and the
+            programming logic used to implement these laws. Game physics vary
+            greatly in their degree of similarity to real-world physics.
+          </p>
+          <a
+            href="https://medium.com/@sonusprocks/physics-concepts-used-in-game-dev-unity-5dc36ca9fc22"
+            class="btn btn-primary btncard"
+            >Let's Start</a
+          >
+        </div>
+      </div>
+
+      <div class="card mt-4 bgcolor" style="width: 18rem">
+        <img
+          src="Game_Engine.jfif"
+          class="card-img-top mt-3"
+          alt="Game Engine"
+        />
+        <div class="card-body">
+          <h5 class="card-title">Game Engine</h5>
+          <p class="card-text">
+            A game engine is a software development environment that helps users
+            create video games more easily. Game engines provide a framework
+            that includes tools for animation, physics, artificial intelligence,
+            and audio.
+          </p>
+          <a
+            href="https://www.javatpoint.com/static-polymorphism-in-cpp"
+            class="btn btn-primary btncard"
+            >Let's Start</a
+          >
+        </div>
+      </div>
+
+      <div class="card mt-4 bgcolor" style="width: 18rem">
+        <img
+          src="Programming_Languages.jfif"
+          class="card-img-top mt-3"
+          alt="Programming Languages"
+        />
+        <div class="card-body">
+          <h5 class="card-title">Programming Languages</h5>
+          <p class="card-text">
+            To simplify your decision-making process, we've categorized common
+            game development scenarios and their ideal programming languages:
+            Simple Games: Python, Lua, JavaScript, C# 3D Games: C++, C# AR/VR
+            Games: C++, C#, JavaScript, Swift.
+          </p>
+          <a
+            href="https://www.javatpoint.com/why-should-you-learn-cpp-for-game-development"
+            class="btn btn-primary btncard"
+            >Let's Start</a
+          >
+        </div>
+      </div>
+
+      <div class="card mt-4 bgcolor" style="width: 18rem">
+        <img
+          src="Computer_Graphics.jfif"
+          class="card-img-top mt-3"
+          alt="Computer Graphics"
+        />
+        <div class="card-body">
+          <h5 class="card-title">Computer Graphics</h5>
+          <p class="card-text">
+            Computer graphics for game development is a field that involves
+            using computer programs and tools to create imagery for
+            games.Computer graphics, like the term suggests, is the process of
+            creating imagery using computer programs and tools.
+          </p>
+          <a
+            href="https://dev.to/fkkarakurt/introduction-to-game-graphics-3l89"
+            class="btn btn-primary btncard"
+            >Let's Start</a
+          >
+        </div>
+      </div>
+
+      <div class="card mt-4 bgcolor" style="width: 18rem">
+        <img
+          src="Graphics_Api.jfif"
+          class="card-img-top mt-3"
+          alt="Graphics Api"
+        />
+        <div class="card-body">
+          <h5 class="card-title">Graphics Api</h5>
+          <p class="card-text">
+            These are like the tools that help your game talk to the graphics
+            hardware in your computer. Basically, they provide a way to create
+            visuals and effects in your game. Shader Languages: Think of these
+            as the special languages that help you create custom visual effects.
+          </p>
+          <a
+            href="https://www.reddit.com/r/gamedev/comments/z70zg3/api_of_graphics_apis/"
+            class="btn btn-primary btncard"
+            >Let's Start</a
+          >
+        </div>
+      </div>
+
+      <div class="card mt-4 bgcolor" style="width: 18rem">
+        <img src="Game_Al.jfif" class="card-img-top mt-3" alt="Game Al" />
+        <div class="card-body">
+          <h5 class="card-title">Game Al</h5>
+          <p class="card-text">
+            Game AI refers to the use of artificial intelligence techniques to
+            control non-player characters (NPCs) in video games. This can
+            include anything from simple pathfinding algorithms to more complex
+            decision-making systems.
+          </p>
+          <a
+            href="https://www.geeksforgeeks.org/game-playing-in-artificial-intelligence/"
+            class="btn btn-primary btncard"
+            >Let's Start</a
+          >
+        </div>
+      </div>
+
+      <div class="card mt-4 bgcolor" style="width: 18rem">
+        <img
+          src="Advanced_Rendering.jfif"
+          class="card-img-top mt-3"
+          alt="Advanced Rendering"
+        />
+        <div class="card-body">
+          <h5 class="card-title">Advanced Rendering</h5>
+          <p class="card-text">
+            Advanced rendering in game development refers to the use of
+            cutting-edge techniques to create visually stunning and immersive
+            game worlds. These techniques go beyond traditional rendering
+            methods to simulate real-world lighting, shadows, reflections, and
+            other effects with greater accuracy and realism.
+          </p>
+          <a
+            href="https://www.reddit.com/r/gamedev/comments/j048b4/what_rendering_techniques_are_modern_games_using/?rdt=44792"
+            class="btn btn-primary btncard"
+            >Let's Start</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
